@@ -1,0 +1,148 @@
+.timeless-settings-page .nav-tab-wrapper {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0 10px;
+}
+
+.timeless-settings-page .mdui-tab {
+    margin-bottom: 2rem;
+    background-color: transparent;
+}
+
+.timeless-settings-page .mdui-tab a {
+    min-width: 120px;
+    justify-content: center;
+}
+
+.timeless-settings-page .mdui-textfield {
+    margin: 20px 0;
+}
+
+.timeless-settings-page .mdui-textfield-label {
+    font-weight: 500;
+}
+
+.timeless-settings-page .mdui-btn {
+    margin-top: 1.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 暗色模式适配 */
+.mdui-theme-layout-dark .timeless-settings-page {
+    background-color: #121212;
+}
+
+.mdui-theme-layout-dark .mdui-tab {
+    background-color: #1e1e1e;
+}
+
+.mdui-theme-layout-dark .form-table {
+    background-color: #1e1e1e;
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+/* 移动端适配 */
+@media (max-width: 600px) {
+    .timeless-settings-page .mdui-tab {
+        flex-direction: column;
+    }
+    
+    .timeless-settings-page .mdui-tab a {
+        width: 100%;
+        margin: 4px 0;
+    }
+}
+
+/* 加载状态指示器 */
+.settings-loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.spinner {
+    animation: rotate 1.4s linear infinite;
+    width: 40px;
+    height: 40px;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.timeless-settings-page .form-table th {
+    padding: 20px 10px 20px 0;
+    width: 200px;
+}
+
+.timeless-settings-page .form-table td {
+    padding: 15px 10px;
+}
+
+.timeless-settings-page .regular-text {
+    width: 100%;
+    max-width: 400px;
+}
+
+.timeless-settings-page .description {
+    margin-top: 5px;
+    color: #666;
+}
+
+.timeless-settings-page .image-preview,
+.timeless-settings-page .favicon-preview {
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    padding: 5px;
+    background: #f9f9f9;
+}
+
+.timeless-settings-page .button {
+    margin: 5px 0;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.timeless-settings-page .button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.timeless-settings-page .tab-content {
+    display: none;
+    padding: 20px 0;
+}
+
+.timeless-settings-page .tab-content.active {
+    display: block;
+}
+
+.timeless-settings-page textarea {
+    width: 100%;
+    max-width: 600px;
+    min-height: 150px;
+}
+/* 增加样式隔离 */
+.timeless-settings-page {
+    margin: 20px 15px 0 0;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* 修复表单元素冲突 */
+.timeless-settings-page .mdui-textfield {
+    margin: 16px 0;
+}
+
+.timeless-settings-page .mdui-btn {
+    margin-top: 20px;
+}
+
+/* 增加z-index解决下拉菜单遮挡问题 */
+.timeless-settings-page .mdui-select {
+    z-index: 1000;
+}

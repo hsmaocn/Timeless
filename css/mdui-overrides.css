@@ -1,0 +1,48 @@
+:root {
+  --pixel-border: 2px solid #000;
+  --pixel-radius: 0;
+  --pixel-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* 基础组件覆盖 */
+.mdui-btn {
+  border-radius: var(--pixel-radius) !important;
+  border: var(--pixel-border) !important;
+  box-shadow: var(--pixel-shadow) !important;
+  image-rendering: pixelated;
+}
+
+.mdui-card {
+  border: var(--pixel-border);
+  box-shadow: var(--pixel-shadow);
+  border-radius: var(--pixel-radius);
+}
+
+/* 导航栏像素化 */
+.mdui-appbar {
+  border-bottom: var(--pixel-border) !important;
+  box-shadow: var(--pixel-shadow) !important;
+}
+
+/* 输入框聚焦状态 */
+.mdui-textfield-focus .mdui-textfield-input {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 2px var(--primary);
+}
+
+/* 按钮激活状态 */
+.mdui-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2) !important;
+}
+
+/* 输入框样式 */
+.mdui-textfield-input {
+  border: var(--pixel-border);
+  padding: 8px !important;
+}
+
+/* 图标按钮像素化 */
+.mdui-icon {
+  image-rendering: crisp-edges;
+}
